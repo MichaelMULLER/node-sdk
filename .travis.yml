@@ -14,6 +14,8 @@ before_install:
   && cd test/resources/ && tar xvf secrets.tar
   && cd ../.. || true'
 - npm install -g typescript
+install:
+  - npm ci
 script:
 - tsc
 - npm run test-unit-travis || travis_terminate 1
